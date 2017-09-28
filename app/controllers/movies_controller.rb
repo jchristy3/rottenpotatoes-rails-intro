@@ -23,6 +23,9 @@ class MoviesController < ApplicationController
       @release_date_header = 'hilite'
     end
     
+    @all_ratings = Movie.all_ratings
+    @selected_ratings = params[:ratings]
+    
     @movies = Movie.order(ordering)
   end
 
